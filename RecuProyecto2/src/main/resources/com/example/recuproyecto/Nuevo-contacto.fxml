@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.recuproyecto.Controladores.NuevoContacto"
+            prefHeight="600.0" prefWidth="900.0" >
+
+
+    <children>
+        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="900.0">
+            <children>
+                <Label prefHeight="33.0" prefWidth="52.0" text="Nombre">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tfNombre" onAction="#anadirNombre" prefHeight="42.0" prefWidth="627.0" />
+                <Label prefHeight="34.0" prefWidth="66.0" text="Apellido 1">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tfApellido1" onAction="#anadirApellido1" prefHeight="42.0" prefWidth="627.0" />
+                <Label prefHeight="34.0" prefWidth="70.0" text="Apellido 2">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tfApellido2" onAction="#anadirApellido2" prefHeight="42.0" prefWidth="627.0" />
+                <Label prefHeight="34.0" prefWidth="62.0" text="Telefono">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tfTelefono" onAction="#anadirTelefono" prefHeight="42.0" prefWidth="627.0" />
+                <Label prefHeight="33.0" prefWidth="52.0" text="Email">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tfEmail" onAction="#anadirEmail" prefHeight="42.0" prefWidth="627.0" />
+                <Button fx:id="btAnadirContacto" mnemonicParsing="false" onAction="#anadirContacto" prefHeight="34.0" prefWidth="302.0" text="Añadir contacto">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btVolver" mnemonicParsing="false" onAction="#Volver" text="Volver">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+            <padding>
+                <Insets left="150.0" right="150.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

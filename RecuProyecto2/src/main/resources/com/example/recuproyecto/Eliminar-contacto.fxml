@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.recuproyecto.Controladores.EliminarContacto"
+            prefHeight="600.0" prefWidth="900.0" >
+
+    <children>
+        <TextField fx:id="tfTelefono" layoutX="325.0" layoutY="191.0" onAction="#anadirTelefono" prefHeight="42.0" prefWidth="250.0" />
+        <Label layoutX="318.0" layoutY="132.0" prefHeight="27.0" prefWidth="262.0" text="Introduzca numero de telefono">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="btEliminarContacto" layoutX="395.0" layoutY="260.0" mnemonicParsing="false" onAction="#eliminarContacto" text="Eliminar contacto" />
+        <Button fx:id="btVolver" layoutX="425.0" layoutY="329.0" mnemonicParsing="false" onAction="#Volver" text="Volver" />
+    </children>
+
+</AnchorPane>
+
+
+
+
