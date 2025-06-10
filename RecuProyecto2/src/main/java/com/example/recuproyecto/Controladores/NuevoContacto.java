@@ -68,6 +68,11 @@ public class NuevoContacto {
             }
         }
 
+        if (!telefonoStr.matches("6\\d{8}")) {
+            mostrarAlerta(Alert.AlertType.ERROR, "Teléfono inválido", "Debe empezar por 6 y tener 9 dígitos.");
+            return;
+        }
+
         Contacto nuevo = new Contacto(0, nombre, apellido1, apellido2, telefono, email);
         contactoDAO.insertar(nuevo);
 
@@ -81,6 +86,14 @@ public class NuevoContacto {
         tfEmail.clear();
     }
 
+    private void mostrarAlerta(Alert.AlertType tipo, String titulo, String mensaje) {
+        Alert alerta = new Alert(tipo);
+        alerta.setTitle(titulo);
+        alerta.setHeaderText(null);
+        alerta.setContentText(mensaje);
+        alerta.showAndWait();
+    }
+
     private void mostrarAlerta(String titulo, String contenido) {
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);
         alerta.setTitle(titulo);
@@ -88,6 +101,7 @@ public class NuevoContacto {
         alerta.setContentText(contenido);
         alerta.showAndWait();
     }
+    
 
     @FXML
     public void Volver(ActionEvent actionEvent) {
