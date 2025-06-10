@@ -65,10 +65,14 @@ public class EditarContacto {
             return;
         }
 
-        String nombre = tfNombre.getText().trim();
-        String apellido1 = tfApellido1.getText().trim();
-        String apellido2 = tfApellido2.getText().trim();
-        String telefonoStr = tfTelefono.getText().trim();
+        String nombre = tfNombre.getText();
+        String valor1=(nombre != null ? nombre.trim() : "");
+        String apellido1 = tfApellido1.getText();
+        String valor2=(apellido1 != null ? apellido1.trim() : "");
+        String apellido2 = tfApellido2.getText();
+        String valor3=(apellido2 != null ? apellido2.trim() : "");
+        String telefonoStr = tfTelefono.getText();
+        String valor4=(telefonoStr != null ? telefonoStr.trim() : "");
 
         if (nombre.isEmpty() || apellido1.isEmpty() || telefonoStr.isEmpty()) {
             mostrarAlerta(Alert.AlertType.ERROR, "Campos vacíos", "Nombre, primer apellido y teléfono son obligatorios.");
