@@ -8,5 +8,7 @@ module com.example.recuproyecto {
     exports com.example.recuproyecto.Controladores;
 
     opens com.example.recuproyecto.Controladores to javafx.fxml;
-
+    opens com.example.recuproyecto.POJO to javafx.base;
 }
+
+
