@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.recuproyecto.Controladores.PrincipalController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.recuproyecto.Controladores.PrincipalController">
       <children>
         <Button fx:id="btNuevoContacto" layoutX="519.0" layoutY="545.0" onAction="#nuevoContacto" text="Nuevo Conatacto" />
       
@@ -22,7 +17,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="462.0" prefWidth="173.0">
                      <children>
-                        <TableView layoutY="14.0" prefHeight="446.0" prefWidth="354.0">
+                        <TableView fx:id="tablaContactos" layoutY="14.0" prefHeight="446.0" prefWidth="354.0">
                           <columns>
                             <TableColumn fx:id="tcMostrarNombre" prefWidth="170.39998626708984" text="Nombre" />
                             <TableColumn fx:id="tcMostrarApellido1" minWidth="0.0" prefWidth="164.79998779296875" text="Primer Apellido" />
@@ -31,6 +26,16 @@
                               <Insets left="20.0" />
                            </padding>
                         </TableView>
+                        <Text layoutX="407.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" />
+                        <Text layoutX="407.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Primer Apellido:" />
+                        <Text layoutX="407.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Segundo Apellido:" />
+                        <Text layoutX="407.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero de Telefono:" />
+                        <Text layoutX="407.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
+                        <Label fx:id="lblNombre" layoutX="608.0" layoutY="78.0" text="Label" />
+                        <Label fx:id="lblApellido1" layoutX="608.0" layoutY="126.0" text="Label" />
+                        <Label fx:id="lblApellido2" layoutX="608.0" layoutY="178.0" text="Label" />
+                        <Label fx:id="lblTelefono" layoutX="608.0" layoutY="229.0" text="Label" />
+                        <Label fx:id="lblEmail" layoutX="608.0" layoutY="276.0" text="Label" />
                      </children>
                   </AnchorPane>
             </content>
